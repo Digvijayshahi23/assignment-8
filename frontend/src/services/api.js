@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.PROD ? '/api/todos' : 'http://localhost:5000/api/todos';
-
+const API_URL = '/api/todos';
 
 export const getTodos = async (search = '') => {
   const response = await axios.get(`${API_URL}?search=${search}`);
