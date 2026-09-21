@@ -58,7 +58,7 @@ function App() {
   return (
     <div className="app-container">
       <header className="header">
-        <h1>Antigravity Tasks</h1>
+        <h1>To-Do List App</h1>
         <p>Stay organized, stay productive.</p>
       </header>
 
