@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-  --container-bg: rgba(30, 41, 59, 0.7);
-  --container-border: rgba(255, 255, 255, 0.1);
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --primary: #6366f1;
-  --primary-hover: #4f46e5;
-  --danger: #f43f5e;
-  --danger-hover: #e11d48;
+  --bg-gradient: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  --container-bg: #ffffff;
+  --container-border: #e5e7eb;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
   --success: #10b981;
-  --border: rgba(255, 255, 255, 0.1);
-  --card-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.2);
+  --border: #e5e7eb;
+  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
 }
 
 * {
@@ -37,8 +37,6 @@ body {
   width: 100%;
   max-width: 600px;
   background-color: var(--container-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   border-radius: 20px;
   padding: 2.5rem;
   box-shadow: var(--card-shadow);
@@ -91,7 +89,7 @@ body {
 
 .todo-input, .search-input {
   flex: 1;
-  background-color: #0f172a;
+  background-color: #f9fafb;
   border: 1px solid var(--border);
   color: var(--text-main);
   padding: 0.75rem 1rem;
@@ -103,7 +101,8 @@ body {
 
 .todo-input:focus, .search-input:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
 }
 
 .btn {
@@ -137,13 +136,13 @@ body {
 }
 
 .btn-icon:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #f3f4f6;
   color: var(--text-main);
 }
 
 .btn-icon.delete:hover {
   color: var(--danger);
-  background-color: rgba(239, 68, 68, 0.1);
+  background-color: #fee2e2;
 }
 
 .btn-icon.complete {
@@ -162,7 +161,7 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   padding: 1.25rem;
-  background-color: #0f172a;
+  background-color: #ffffff;
   border-radius: 12px;
   border: 1px solid var(--border);
   transition: all 0.3s ease;
@@ -175,9 +174,9 @@ body {
 }
 
 .todo-item:hover {
-  border-color: #475569;
+  border-color: #d1d5db;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
 }
 
 .todo-content {
@@ -236,7 +235,7 @@ body {
 
 /* Loader */
 .loader {
-  border: 3px solid rgba(255,255,255,0.1);
+  border: 3px solid #e5e7eb;
   border-top-color: var(--primary);
   border-radius: 50%;
   width: 24px;
@@ -251,8 +250,9 @@ body {
 
 /* Error message */
 .error-msg {
-  background-color: rgba(239, 68, 68, 0.1);
+  background-color: #fee2e2;
   color: var(--danger);
+  border: 1px solid #fecaca;
   padding: 0.75rem;
   border-radius: 8px;
   margin-bottom: 1rem;
