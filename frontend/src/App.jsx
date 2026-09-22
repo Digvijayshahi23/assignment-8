@@ -21,7 +21,8 @@ function App() {
       const res = await getTodos(search);
       setTodos(res.data);
     } catch (err) {
-      setError('Failed to fetch tasks. Make sure the backend is running.');
+      const errorMsg = err.response?.data?.error;
+      setError(Array.isArray(errorMsg) ? errorMsg[0] : (errorMsg || 'Failed to fetch tasks.'));
     } finally {
       setLoading(false);
     }
@@ -32,7 +33,8 @@ function App() {
       const res = await createTodo(todoData);
       setTodos([res.data, ...todos]);
     } catch (err) {
-      setError(err.response?.data?.error?.[0] || 'Failed to add task.');
+      const errorMsg = err.response?.data?.error;
+      setError(Array.isArray(errorMsg) ? errorMsg[0] : (errorMsg || 'Failed to add task. Make sure MongoDB is connected.'));
     }
   };
 
